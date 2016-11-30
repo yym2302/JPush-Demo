@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+  <display-name></display-name>	
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  <!--移动端接口 推送消息-->
+  <servlet>
+	<servlet-name >push</servlet-name>
+	<servlet-class>com.jnsw.jpush.servlet.push</servlet-class>
+  </servlet>
+  <servlet-mapping>
+   	 <servlet-name >push</servlet-name>
+   	 <url-pattern>/push</url-pattern>
+  </servlet-mapping>
+   <!--移动端接口 获取统计数据-->
+  <servlet>
+	<servlet-name >totalManager</servlet-name>
+	<servlet-class>com.jnsw.jpush.servlet.TotalManager</servlet-class>
+  </servlet>
+  <servlet-mapping>
+   	 <servlet-name >totalManager</servlet-name>
+   	 <url-pattern>/totalManager</url-pattern>
+  </servlet-mapping>
+</web-app>
